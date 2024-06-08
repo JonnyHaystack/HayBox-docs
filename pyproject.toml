@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "haybox-docs"
+version = "0.1.0"
+description = "Official documentation for HayBox firmware"
+authors = ["Jonathan Haylett <jonathan@haylett.dev>"]
+license = "GPL-3.0-only"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+mkdocs-material = "^9.5.26"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
