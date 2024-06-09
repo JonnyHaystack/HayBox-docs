@@ -4,3 +4,5 @@ theme:
   name: material
   features:
     - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
