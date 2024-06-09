@@ -25,8 +25,8 @@ jobs:
         run: |
           mkdir -p docs/proto
           docker run --rm \
-            -v docs/proto:/out \
-            -v proto:/protos \
+            -v $(pwd)/docs/proto:/out \
+            -v $(pwd)/proto:/protos \
             pseudomuto/protoc-gen-doc --doc_opt=markdown,proto.md
 
       - name: Build site
