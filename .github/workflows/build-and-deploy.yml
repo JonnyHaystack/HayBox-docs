@@ -15,6 +15,20 @@ jobs:
       - name: Check out this repo
         uses: actions/checkout@v4
 
+      - name: Check out HayBox-proto
+        uses: actions/checkout@v4
+        with:
+          repository: JonnyHaystack/HayBox-proto
+          path: proto
+
+      - name: Generate protobuf documentation
+        run: |
+          mkdir -p docs/proto
+          docker run --rm \
+            -v docs/proto:/out \
+            -v proto:/protos \
+            pseudomuto/protoc-gen-doc --doc_opt=markdown,proto.md
+
       - name: Build site
         run: |
           poetry install
