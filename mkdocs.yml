@@ -2,3 +2,5 @@ site_name: HayBox
 site_url: https://jonnyhaystack.github.io/haybox
 theme:
   name: material
+  features:
+    - navigation.instant
