@@ -2,6 +2,7 @@ site_name: HayBox Firmware
 site_url: https://jonnyhaystack.github.io/haybox
 repo_name: HayBox
 repo_url: https://github.com/JonnyHaystack/HayBox
+copyright: Copyright &copy; 2024 Jonathan Haylett
 theme:
   name: material
   icon:
