@@ -23,7 +23,6 @@ jobs:
 
       - name: Generate protobuf documentation
         run: |
-          mkdir -p docs/proto
           docker run --rm \
             -v $(pwd)/docs:/out \
             -v $(pwd)/proto:/protos \
