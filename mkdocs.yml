@@ -11,7 +11,8 @@ theme:
     - navigation.instant
     - navigation.instant.prefetch
     - navigation.instant.progress
-    - toc.integrate
+    - navigation.top
+    - navigation.tabs
     - toc.follow
 markdown_extensions:
   - toc:
