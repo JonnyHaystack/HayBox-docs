@@ -27,7 +27,7 @@ jobs:
           docker run --rm \
             -v $(pwd)/docs:/out \
             -v $(pwd)/proto:/protos \
-            pseudomuto/protoc-gen-doc --doc_opt=markdown.tmpl,markdown,proto.md
+            pseudomuto/protoc-gen-doc --doc_opt=markdown.tmpl,proto.md
 
       - name: Build site
         run: |
