@@ -13,9 +13,11 @@ theme:
     - navigation.instant.progress
     - navigation.top
     - navigation.tabs
+    - navigation.path
     - toc.follow
 markdown_extensions:
   - toc:
       permalink: "#"
 plugins:
   - privacy
+  - social
