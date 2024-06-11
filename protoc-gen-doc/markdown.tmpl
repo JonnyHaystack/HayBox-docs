@@ -3,10 +3,6 @@
 
 {{range .Files}}
 {{$file_name := .Name}}
-<a name="{{.Name | lower | anchor}}"></a>
-<p align="right"><a href="#top">Top</a></p>
-
-## {{.Name}}
 {{.Description}}
 
 {{range .Messages}}
