@@ -3,6 +3,11 @@ site_url: https://jonnyhaystack.github.io/haybox
 repo_name: HayBox
 repo_url: https://github.com/JonnyHaystack/HayBox
 copyright: Copyright &copy; 2024 Jonathan Haylett
+nav:
+  - Overview: index.md
+  - Getting started: installation.md
+  - Configuration:
+    - "Protocol Documentation": proto.md
 theme:
   name: material
   icon:
