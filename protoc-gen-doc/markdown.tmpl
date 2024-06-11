@@ -3,21 +3,21 @@
 
 ## Table of Contents
 {{range .Files}}
-{{$file_name := .Name}}- [{{.Name}}](#{{.Name | strings.ToLower | anchor}})
+{{$file_name := .Name}}- [{{.Name}}](#{{.Name | lower | anchor}})
   {{- if .Messages }}
-  {{range .Messages}}  - [{{.LongName}}](#{{.FullName | strings.ToLower | anchor}})
+  {{range .Messages}}  - [{{.LongName}}](#{{.FullName | lower | anchor}})
   {{end}}
   {{- end -}}
   {{- if .Enums }}
-  {{range .Enums}}  - [{{.LongName}}](#{{.FullName | strings.ToLower | anchor}})
+  {{range .Enums}}  - [{{.LongName}}](#{{.FullName | lower | anchor}})
   {{end}}
   {{- end -}}
   {{- if .Extensions }}
-  {{range .Extensions}}  - [File-level Extensions](#{{$file_name | strings.ToLower | anchor}}-extensions)
+  {{range .Extensions}}  - [File-level Extensions](#{{$file_name | lower | anchor}}-extensions)
   {{end}}
   {{- end -}}
   {{- if .Services }}
-  {{range .Services}}  - [{{.Name}}](#{{.FullName | strings.ToLower | anchor}})
+  {{range .Services}}  - [{{.Name}}](#{{.FullName | lower | anchor}})
   {{end}}
   {{- end -}}
 {{end}}
@@ -25,14 +25,14 @@
 
 {{range .Files}}
 {{$file_name := .Name}}
-<a name="{{.Name | strings.ToLower | anchor}}"></a>
+<a name="{{.Name | lower | anchor}}"></a>
 <p align="right"><a href="#top">Top</a></p>
 
 ## {{.Name}}
 {{.Description}}
 
 {{range .Messages}}
-<a name="{{.FullName | strings.ToLower | anchor}}"></a>
+<a name="{{.FullName | lower | anchor}}"></a>
 
 ### {{.LongName}}
 {{.Description}}
@@ -41,7 +41,7 @@
 | Field | Type | Label | Description |
 | ----- | ---- | ----- | ----------- |
 {{range .Fields -}}
-  | {{.Name}} | [{{.LongType}}](#{{.FullType | strings.ToLower | anchor}}) | {{.Label}} | {{if (index .Options "deprecated"|default false)}}**Deprecated.** {{end}}{{nobr .Description}}{{if .DefaultValue}} Default: {{.DefaultValue}}{{end}} |
+  | {{.Name}} | [{{.LongType}}](#{{.FullType | lower | anchor}}) | {{.Label}} | {{if (index .Options "deprecated"|default false)}}**Deprecated.** {{end}}{{nobr .Description}}{{if .DefaultValue}} Default: {{.DefaultValue}}{{end}} |
 {{end}}
 {{end}}
 
@@ -56,7 +56,7 @@
 {{end}} <!-- end messages -->
 
 {{range .Enums}}
-<a name="{{.FullName | strings.ToLower | anchor}}"></a>
+<a name="{{.FullName | lower | anchor}}"></a>
 
 ### {{.LongName}}
 {{.Description}}
@@ -70,7 +70,7 @@
 {{end}} <!-- end enums -->
 
 {{if .HasExtensions}}
-<a name="{{$file_name | strings.ToLower | anchor}}-extensions"></a>
+<a name="{{$file_name | lower | anchor}}-extensions"></a>
 
 ### File-level Extensions
 | Extension | Type | Base | Number | Description |
@@ -81,7 +81,7 @@
 {{end}} <!-- end HasExtensions -->
 
 {{range .Services}}
-<a name="{{.FullName | strings.ToLower | anchor}}"></a>
+<a name="{{.FullName | lower | anchor}}"></a>
 
 ### {{.Name}}
 {{.Description}}
@@ -89,7 +89,7 @@
 | Method Name | Request Type | Response Type | Description |
 | ----------- | ------------ | ------------- | ------------|
 {{range .Methods -}}
-  | {{.Name}} | [{{.RequestLongType}}](#{{.RequestFullType | strings.ToLower | anchor}}){{if .RequestStreaming}} stream{{end}} | [{{.ResponseLongType}}](#{{.ResponseFullType | strings.ToLower | anchor}}){{if .ResponseStreaming}} stream{{end}} | {{nobr .Description}} |
+  | {{.Name}} | [{{.RequestLongType}}](#{{.RequestFullType | lower | anchor}}){{if .RequestStreaming}} stream{{end}} | [{{.ResponseLongType}}](#{{.ResponseFullType | lower | anchor}}){{if .ResponseStreaming}} stream{{end}} | {{nobr .Description}} |
 {{end}}
 {{end}} <!-- end services -->
 
@@ -100,5 +100,5 @@
 | .proto Type | Notes | C++ | Java | Python | Go | C# | PHP | Ruby |
 | ----------- | ----- | --- | ---- | ------ | -- | -- | --- | ---- |
 {{range .Scalars -}}
-  | <a name="{{.ProtoType | strings.ToLower | anchor}}" /> {{.ProtoType}} | {{.Notes}} | {{.CppType}} | {{.JavaType}} | {{.PythonType}} | {{.GoType}} | {{.CSharp}} | {{.PhpType}} | {{.RubyType}} |
+  | <a name="{{.ProtoType | lower | anchor}}" /> {{.ProtoType}} | {{.Notes}} | {{.CppType}} | {{.JavaType}} | {{.PythonType}} | {{.GoType}} | {{.CSharp}} | {{.PhpType}} | {{.RubyType}} |
 {{end}}
