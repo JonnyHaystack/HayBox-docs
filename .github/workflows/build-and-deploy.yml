@@ -23,10 +23,11 @@ jobs:
 
       - name: Generate protobuf documentation
         run: |
+          cp protoc-gen-doc/markdown.tmpl proto/
           docker run --rm \
             -v $(pwd)/docs:/out \
             -v $(pwd)/proto:/protos \
-            pseudomuto/protoc-gen-doc --doc_opt=markdown,proto.md
+            pseudomuto/protoc-gen-doc --doc_opt=/proto/markdown.tmpl,markdown,proto.md
 
       - name: Build site
         run: |
