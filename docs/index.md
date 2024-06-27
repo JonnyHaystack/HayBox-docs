@@ -10,22 +10,22 @@ HayBox is a modular, cross-platform firmware for digital or mixed analog/digital
 Features include:
 
 - Cross platform support:
-  - RP2040 (e.g. Raspberry Pi Pico)
-  - 16MHz AVR MCUs (e.g. ATMega32U4 which several Arduinos are based on)
+    - RP2040 (e.g. Raspberry Pi Pico)
+    - 16MHz AVR MCUs (e.g. ATMega32U4 which several Arduinos are based on)
 - Supports many existing controllers/PCBs, e.g. B0XX, LBX, Smash Box, Crane's
   GCCPCB/Model S
 - Supports a variety of communication backends which can be used either separately or in conjunction with each other:
-  - XInput
-  - DInput
-  - GameCube console
-  - Nintendo 64 console
-  - Nintendo Switch console
-  - B0XX input viewer
+    - XInput
+    - DInput
+    - GameCube console
+    - Nintendo 64 console
+    - Nintendo Switch console
+    - B0XX input viewer
 - Supports a variety of "input sources" which can be used in conjunction to create mixed input controllers:
-  - Buttons/switches wired directly to GPIO pins
-  - Switch matrix (as typically found in keyboards)
-  - Wii Nunchuk
-  - GameCube controller
+    - Buttons/switches wired directly to GPIO pins
+    - Switch matrix (as typically found in keyboards)
+    - Wii Nunchuk
+    - GameCube controller
 - Melee mode up to date with B0XX V3 specifications
 - Existing modes for popular games (e.g. Melee, Project M, Ultimate, Rivals of Aether, traditional fighting games)
 - Easy to create new controller modes (or keyboard modes) for different games
