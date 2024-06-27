@@ -8,6 +8,7 @@ HayBox is a modular, cross-platform firmware for digital or mixed analog/digital
 ## Features
 
 Features include:
+
 - Cross platform support:
   - RP2040 (e.g. Raspberry Pi Pico)
   - 16MHz AVR MCUs (e.g. ATMega32U4 which several Arduinos are based on)
